@@ -1,1 +1,1 @@
-# rl-learning
+# This repository follows Reinforcement learning book (by Richard S. Sutto and Adrew G. Barto) and CS234 by Stanford (Emma Brunskill)
