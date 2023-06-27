@@ -270,6 +270,13 @@ class TicTacToeBoard:
                     print("You won, congratulations.....")
                     break
 
-game = TicTacToeBoard(greedy_rate=0.3)
-game.train_game(num_episodes=200)
-game.play()
+if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--eps-greedy', type=float, default=0.3)
+    parser.add_argument('--num-episodes', type=int, default=300)
+    args = parser.parse_args()
+
+    game = TicTacToeBoard(greedy_rate=args.eps_greedy)
+    game.train_game(num_episodes=args.num_episodes)
+    game.play()
